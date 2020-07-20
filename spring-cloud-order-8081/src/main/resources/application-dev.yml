@@ -1,0 +1,22 @@
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://user:123456@localhost:8080/eureka
+  instance:
+    hostname: order-server
+
+spring:
+  datasource:
+    url: jdbc:mysql://10.10.10.111:3306/test123?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: Raykite_888!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#log
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.http.server.reactive: debug
+    org.springframework.http.web.reactive: debug
+    reactor.ipc.netty: debug

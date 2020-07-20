@@ -1,0 +1,17 @@
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://user:123456@localhost:8763/eureka
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false
+spring:
+  security:
+    user:
+      name: user
+      password: 123456
