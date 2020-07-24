@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-cloud-eureka-8080</module>
+        <module>spring-cloud-order-8081</module>
+        <module>spring-cloud-gateway-8082</module>
         <module>spring-cloud-config-server</module>
     </modules>
     <parent>

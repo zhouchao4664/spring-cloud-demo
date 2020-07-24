@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://user:123456@localhost:8080/eureka
+  instance:
+    hostname: gateway
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test
+          uri: http://localhost:8081/test
+          predicates:
+            - Path=/test
+#            - Auth=Authorization,token
+#
+
