@@ -1,0 +1,31 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: user
+  profiles:
+    active: @activatedProperties@
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+
+hystrix:
+  command:
+    #feign调用默认是1000毫秒=1秒
+    default:
+      execution:
+        #       timeout:
+        #         enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+      circuitBreaker:
+        sleepWindowInMilliseconds: 5000
+        forceClosed: true
+ribbon:
+  #请求处理的超时时间
+  ReadTimeout: 5000
+  SocketTimeout: 5000
+  #请求连接的超时时间
+  ConnectTimeout: 5000

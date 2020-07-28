@@ -15,6 +15,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   zipkin:
     base-url: http://10.10.10.114:9411
+
 #log
 logging:
   level:
