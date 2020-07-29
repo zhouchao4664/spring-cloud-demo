@@ -1,4 +1,4 @@
-package com.zhouchao.spring.cloud.order;
+package com.zhouchao.order;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

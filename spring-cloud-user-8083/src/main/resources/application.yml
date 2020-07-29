@@ -1,9 +1,10 @@
 server:
   port: 8083
-
+  servlet:
+    context-path: /user
 spring:
   application:
-    name: user
+    name: service-user
   profiles:
     active: @activatedProperties@
   jackson:

@@ -8,18 +8,18 @@ eureka:
     service-url:
       defaultZone: http://user:123456@localhost:8080/eureka
   instance:
-    hostname: gateway
+    prefer-ip-address: true
 
 spring:
   application:
-    name: gateway
+    name: service-gateway
   cloud:
     gateway:
       routes:
         - id: test
-          uri: http://localhost:8081/test
+          uri: lb://service-order
           predicates:
-            - Path=/test
+            - Path=/order/**
 #            - Auth=Authorization,token
 #
 

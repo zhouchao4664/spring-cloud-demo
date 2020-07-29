@@ -9,6 +9,8 @@
         <module>spring-cloud-gateway-8082</module>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-user-8083</module>
+        <module>spring-cloud-feign-api</module>
+        <module>spring-cloud-tool</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,8 +27,11 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
-        <mybaties.version>2.0.1</mybaties.version>
-        <lombok.version>1.16.18</lombok.version>
+        <mybaties.version>2.1.1</mybaties.version>
+        <lombok.version>1.18.0</lombok.version>
+        <guava-version>28.0-jre</guava-version>
+        <jackson-version>2.11.0</jackson-version>
+        <slf4j-version>1.7.25</slf4j-version>
     </properties>
 
     <!--<dependencies>
@@ -100,6 +105,21 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

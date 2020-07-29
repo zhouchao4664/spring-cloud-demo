@@ -1,4 +1,4 @@
-package com.zhouchao.spring.cloud.order;
+package com.zhouchao.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

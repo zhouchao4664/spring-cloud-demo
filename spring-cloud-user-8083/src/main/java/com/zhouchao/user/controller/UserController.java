@@ -1,6 +1,8 @@
 package com.zhouchao.user.controller;
 
 import com.zhouchao.user.controller.pojo.UserVo;
+import com.zhouchao.user.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
+    @Autowired
+    UserService userService;
+
     @GetMapping("user/{userId}")
     public UserVo getUser(@PathVariable String userId) {
         UserVo userVo = new UserVo(1, "zhouchao", "男");
         return userVo;
+    }
+
+    @GetMapping("user/order")
+    public String getOrderByUser(){
+        userService.getOrderByUser();
+        return "success";
     }
 
 }
