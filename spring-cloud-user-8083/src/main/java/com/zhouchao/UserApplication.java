@@ -1,4 +1,4 @@
-package com.zhouchao.user;
+package com.zhouchao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
