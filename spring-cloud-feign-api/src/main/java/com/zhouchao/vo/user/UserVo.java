@@ -1,4 +1,4 @@
-package com.zhouchao.user.controller.pojo;
+package com.zhouchao.vo.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

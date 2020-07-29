@@ -1,7 +1,7 @@
 package com.zhouchao.user.controller;
 
-import com.zhouchao.user.controller.pojo.UserVo;
 import com.zhouchao.user.service.UserService;
+import com.zhouchao.vo.user.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
-import com.zhouchao.order.pojo.OrderVo;
+import com.zhouchao.vo.order.OrderVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +29,7 @@ public class OrderController {
     }
 
     @GetMapping("/order/by/user")
-    public String orderListByUser() throws JsonProcessingException {
+    public List<OrderVo> orderListByUser(){
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List list = Lists.newArrayList();
 
@@ -39,10 +39,15 @@ public class OrderController {
         list.add(order1);
         list.add(order2);
 
-        String json = objectMapper.writeValueAsString(list);
+        String json = null;
+        try {
+            json = objectMapper.writeValueAsString(list);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
 
         log.info("json");
-        return json;
+        return list;
     }
 
 }

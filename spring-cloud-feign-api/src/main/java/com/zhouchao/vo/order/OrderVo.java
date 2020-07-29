@@ -1,4 +1,4 @@
-package com.zhouchao.order.pojo;
+package com.zhouchao.vo.order;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

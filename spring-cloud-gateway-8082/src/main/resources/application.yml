@@ -16,10 +16,13 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: test
+        - id: order
           uri: lb://service-order
           predicates:
             - Path=/order/**
 #            - Auth=Authorization,token
 #
-
+        - id: user
+          uri: lb://service-user
+          predicates:
+            - Path=/user/**

@@ -1,6 +1,9 @@
 package com.zhouchao.user.service;
 
+import com.netflix.discovery.converters.Auto;
+import com.zhouchao.fegin.order.OrderFeignClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,9 +15,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    @Autowired
+    OrderFeignClient orderFeignClient;
 
     public void getOrderByUser() {
-
+        orderFeignClient.orderListByUser();
 
     }
 }
