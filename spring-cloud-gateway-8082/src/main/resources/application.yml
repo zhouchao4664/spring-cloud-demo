@@ -15,14 +15,31 @@ spring:
     name: service-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: order
           uri: lb://service-order
           predicates:
             - Path=/order/**
+          filters:
+            - PrefixPath=/order
+#            - StripPrefix=1
 #            - Auth=Authorization,token
 #
         - id: user
           uri: lb://service-user
           predicates:
             - Path=/user/**
+          filters:
+            - PrefixPath=/user
+#            - StripPrefix=1
+
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.http.server.reactive: debug
+    org.springframework.http.web.reactive: debug
+    reactor.ipc.netty: debug
