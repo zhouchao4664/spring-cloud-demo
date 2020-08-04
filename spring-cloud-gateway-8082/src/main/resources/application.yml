@@ -25,16 +25,16 @@ spring:
           predicates:
             - Path=/order/**
           filters:
-            - PrefixPath=/order
+#            - PrefixPath=/order
 #            - StripPrefix=1
 #            - Auth=Authorization,token
-#
+
         - id: user
           uri: lb://service-user
           predicates:
             - Path=/user/**
           filters:
-            - PrefixPath=/user
+#            - PrefixPath=/user
 #            - StripPrefix=1
 
 logging:

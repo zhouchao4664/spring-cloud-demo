@@ -28,7 +28,7 @@ public class OrderController {
         return "这个是测试请求";
     }
 
-    @GetMapping("/order/by/user")
+    @GetMapping("/by/user")
     public List<OrderVo> orderListByUser(){
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List list = Lists.newArrayList();

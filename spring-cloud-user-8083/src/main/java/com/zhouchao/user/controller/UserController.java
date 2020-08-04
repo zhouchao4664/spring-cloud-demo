@@ -18,13 +18,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("user/{userId}")
+    @GetMapping("{userId}")
     public UserVo getUser(@PathVariable String userId) {
         UserVo userVo = new UserVo(1, "zhouchao", "男");
         return userVo;
     }
 
-    @GetMapping("user/order")
+    @GetMapping("order")
     public String getOrderByUser(){
         userService.getOrderByUser();
         return "success";
