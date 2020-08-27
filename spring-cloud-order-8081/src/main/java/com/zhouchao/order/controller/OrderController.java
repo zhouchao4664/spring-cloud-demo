@@ -46,6 +46,12 @@ public class OrderController {
             e.printStackTrace();
         }
 
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         log.info("json");
         return list;
     }

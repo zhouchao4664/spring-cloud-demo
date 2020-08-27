@@ -11,13 +11,17 @@ spring:
     serialization:
       write-dates-as-timestamps: true
 
+feign:
+  hystrix:
+    enabled: true
+
 hystrix:
   command:
     #feign调用默认是1000毫秒=1秒
     default:
       execution:
-        #       timeout:
-        #         enabled: false
+        timeout:
+          enabled: true
         isolation:
           thread:
             timeoutInMilliseconds: 5000
