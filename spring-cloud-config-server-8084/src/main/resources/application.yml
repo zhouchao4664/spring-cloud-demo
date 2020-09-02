@@ -13,6 +13,11 @@ spring:
       server:
         git:
           uri: https://github.com/zhouchao4664/spring-cloud-config-server-test.git
+          username: zhouchao19890214@163.com
+          password: zhouchao19890214
+#        native:
+#          add-label-locations: true
+#          search-locations: C:\Users\RAYDATA\AppData\Local\Temp\config-repo-5937633445309018274\
 
 eureka:
   client:
