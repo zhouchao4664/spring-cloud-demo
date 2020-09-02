@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import com.zhouchao.vo.order.OrderVo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,9 +24,13 @@ public class OrderController {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
+    @Value("${hello}")
+    private String text;
+
     @GetMapping("/test")
     public String test() {
-        return "这个是测试请求";
+        System.out.println(text);
+        return text;
     }
 
     @GetMapping("/by/user")
