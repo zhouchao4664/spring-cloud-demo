@@ -10,6 +10,18 @@ spring:
   jackson:
     serialization:
       write-dates-as-timestamps: true
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+  kafka:
+    bootstrap-servers: 192.168.52.155:9092
+    consumer:
+      group-id: config-server
+
 
 management:
   endpoints:

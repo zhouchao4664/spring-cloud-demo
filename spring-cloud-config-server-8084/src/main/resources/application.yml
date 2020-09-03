@@ -15,6 +15,16 @@ spring:
           uri: https://github.com/zhouchao4664/spring-cloud-config-server-test.git
           username: zhouchao19890214@163.com
           password: zhouchao19890214
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+  kafka:
+    bootstrap-servers: 192.168.52.155:9092
+    consumer:
+      group-id: config-server
 #        native:
 #          add-label-locations: true
 #          search-locations: C:\Users\RAYDATA\AppData\Local\Temp\config-repo-5937633445309018274\
@@ -28,3 +38,8 @@ eureka:
   instance:
     prefer-ip-address: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
