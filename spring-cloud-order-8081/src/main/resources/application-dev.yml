@@ -12,6 +12,8 @@ spring:
 #log
 logging:
   level:
+    org.springframework.web: trace
+    org.springframework.actuator: trace
     org.springframework.cloud.gateway: trace
     org.springframework.http.server.reactive: debug
     org.springframework.http.web.reactive: debug

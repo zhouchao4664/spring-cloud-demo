@@ -11,6 +11,12 @@ spring:
     serialization:
       write-dates-as-timestamps: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
 feign:
   hystrix:
     enabled: true
