@@ -6,8 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import com.zhouchao.vo.order.OrderVo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +30,17 @@ public class OrderController {
 
     @Value("${hello}")
     private String text;
+
+    @Value("${java.version}")
+    private String str;
+
+    @Autowired
+    private Environment environment;
+
+    @GetMapping("/config")
+    public String str(){
+        return environment.getProperty("java.version");
+    }
 
     @GetMapping("/test")
     public String test() {
