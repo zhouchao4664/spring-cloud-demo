@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients(basePackages = "com.zhouchao")
 @EnableTransactionManagement
 @EnableEurekaClient
-@ComponentScan(basePackages = "com.zhouchao.order.controller")
 @SpringBootApplication
 public class OrderApplication {
 

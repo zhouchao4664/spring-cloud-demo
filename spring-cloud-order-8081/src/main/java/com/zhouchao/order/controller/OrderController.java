@@ -34,12 +34,16 @@ public class OrderController {
     @Value("${java.version}")
     private String str;
 
+    @Value("${custom.property.hello}")
+    private String name;
+
     @Autowired
     private Environment environment;
 
     @GetMapping("/config")
     public String str(){
-        return environment.getProperty("java.version");
+        return name;
+//        return environment.getProperty("java.version");
     }
 
     @GetMapping("/test")
