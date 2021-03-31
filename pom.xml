@@ -29,7 +29,7 @@
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <mybaties.version>2.1.1</mybaties.version>
         <lombok.version>1.18.0</lombok.version>
-        <guava-version>28.0-jre</guava-version>
+        <guava-version>29.0-jre</guava-version>
         <jackson-version>2.11.0</jackson-version>
         <slf4j-version>1.7.25</slf4j-version>
     </properties>
