@@ -28,8 +28,8 @@ public class OrderController {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    @Value("${hello}")
-    private String text;
+//    @Value("${hello}")
+//    private String text;
 
     @Value("${java.version}")
     private String str;
@@ -48,8 +48,8 @@ public class OrderController {
 
     @GetMapping("/test")
     public String test() {
-        System.out.println(text);
-        return text;
+        System.out.println(name);
+        return name;
     }
 
     @GetMapping("/by/user")
